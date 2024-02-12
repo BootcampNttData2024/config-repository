@@ -1,0 +1,10 @@
+server:
+  port: 8096
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://BootcampNttdata2024:k9tUuUwOvkdqqrjE@bootcampnttdata2024.zcxsoou.mongodb.net/?retryWrites=true&w=majority
+      database: MSDBYANKI
+logging:
+  level:
+    root: INFO
