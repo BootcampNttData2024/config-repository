@@ -18,8 +18,8 @@ eureka:
 
 microservices:
   ms-product:
-    base:url: http://localhost:8094
+    base-url: http://localhost:8094
   ms-credit:
-    base:url: http://localhost:8093
+    base-url: http://localhost:8093
   ms-client:
-    base:url: http://localhost:8092
+    base-url: http://localhost:8092
