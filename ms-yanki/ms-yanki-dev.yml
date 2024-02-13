@@ -11,7 +11,7 @@ spring:
       group-id: group-yank
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.apache.kafka.common.serialization.JsonDeserializer
+      value-deserializer: org.apache.kafka.support.serializer.JsonDeserializer
 
 logging:
   level:
