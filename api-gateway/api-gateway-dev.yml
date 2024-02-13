@@ -13,9 +13,9 @@ spring:
     gateway:
       routes:
         - id: ms-account
-          uri: lb://ms-account
+          uri: lb://MS-ACCOUNT
           predicates:
-            - Path=/account/*
+            - Path=/account/**
         
         - id: ms-client
           uri: lb://MS-CLIENT
@@ -23,22 +23,22 @@ spring:
             - Path=/client/**
             
         - id: ms-credit
-          uri: lb://ms-credit
+          uri: lb://MS-CREDIT
           predicates:
-            - Path=/credit/*
+            - Path=/credit/**
             
         - id: ms-product
-          uri: lb://ms-product
+          uri: lb://MS-PRODUCT
           predicates:
-            - Path=/product/*
+            - Path=/product/**
             
         - id: ms-transaction
-          uri: lb://ms-transaction
+          uri: lb://MS-TRANSACTION
           predicates:
-            - Path=/transaction/*
+            - Path=/transaction/transfer/**, /transaction/deposit/**, /transaction/withdrawal/**, /transaction/payment/**
             
         - id: ms-yanki
-          uri: lb://ms-yanki
+          uri: lb://MS-YANKI
           predicates:
-            - Path=/yanki/*
+            - Path=/yanki/**
                
