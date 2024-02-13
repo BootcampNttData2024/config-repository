@@ -20,22 +20,22 @@ spring:
         - id: ms-client
           uri: lb://MS-CLIENT
           predicates:
-            - Path=/client/**
+            - Path=/client/**, /client-profile/**
             
         - id: ms-credit
           uri: lb://MS-CREDIT
           predicates:
-            - Path=/credit/**
+            - Path=/credit/**, /credit-card/**
             
         - id: ms-product
           uri: lb://MS-PRODUCT
           predicates:
-            - Path=/product/**
+            - Path=/product/**, /product-business-rule/**, /product-type/**
             
         - id: ms-transaction
           uri: lb://MS-TRANSACTION
           predicates:
-            - Path=/transaction/transfer/**, /transaction/deposit/**, /transaction/withdrawal/**, /transaction/payment/**
+            - Path=/transaction/transfer/**, /transaction/deposit/**, /transaction/withdrawal/**, /transaction/payment/**, /transaction/commission-report/**
             
         - id: ms-yanki
           uri: lb://MS-YANKI
