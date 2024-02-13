@@ -5,6 +5,14 @@ spring:
     mongodb:
       uri: mongodb+srv://BootcampNttdata2024:k9tUuUwOvkdqqrjE@bootcampnttdata2024.zcxsoou.mongodb.net/?retryWrites=true&w=majority
       database: MSDBYANKI
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group-demo
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      
 logging:
   level:
     root: INFO
