@@ -5,4 +5,40 @@ eureka:
     hostname: localhost
   client:
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:9091/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: ms-account
+          uri: lb://ms-account
+          predicates:
+            - Path=/account/*
+        
+        - id: ms-client
+          uri: lb://ms-client
+          predicates:
+            - Path=/client/*
+            
+        - id: ms-credit
+          uri: lb://ms-credit
+          predicates:
+            - Path=/credit/*
+            
+        - id: ms-product
+          uri: lb://ms-product
+          predicates:
+            - Path=/product/*
+            
+        - id: ms-transaction
+          uri: lb://ms-transaction
+          predicates:
+            - Path=/transaction/*
+            
+        - id: ms-yanki
+          uri: lb://ms-yanki
+          predicates:
+            - Path=/yanki/*
+               
