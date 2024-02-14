@@ -41,4 +41,9 @@ spring:
           uri: lb://MS-YANKI
           predicates:
             - Path=/yanki/**
+
+        - id: ms-bootcoin
+          uri: lb://MS-BOOTCOIN
+          predicates:
+            - Path=/peer-to-peer/**, /purchase/**, /purchase-sale-rate/**
                
