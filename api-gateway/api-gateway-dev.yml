@@ -45,5 +45,5 @@ spring:
         - id: ms-bootcoin
           uri: lb://MS-BOOTCOIN
           predicates:
-            - Path=/peer-to-peer/**, /purchase/**, /purchase-sale-rate/**
+            - Path=/peer-to-peer/**, /purchase/**, /purchase-sale-rate/**, /sale/**
                
